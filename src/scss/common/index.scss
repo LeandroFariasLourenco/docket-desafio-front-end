@@ -1,0 +1,8 @@
+@import "./header/index.scss";
+@import "./footer/index.scss";
+
+body {
+  &.home {
+    background-color: $color-gray;
+  }
+}

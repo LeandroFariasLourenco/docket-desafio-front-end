@@ -1,0 +1,81 @@
+{
+  "name": "docket-desafio-front-end",
+  "version": "1.0.0",
+  "description": "Repositório contendo o meu teste à candidatura de front-end da Docket",
+  "scripts": {
+    "start": "yarn clear && webpack serve --open --config webpack.dev.js",
+    "build": "yarn clear && webpack --config webpack.prod.js",
+    "deploy": "",
+    "clear": "rimraf ./build",
+    "lint": "yarn lint:js && yarn lint:scss",
+    "lint:js": "npx eslint ./src --color --ext .js",
+    "lint:scss": "npx stylelint \"./src/**/*.{scss,css}\" --config ./.stylelintrc.js"
+  },
+  "author": "Leandro Farias Lourenço",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "babel": "^6.23.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "css-loader": "^5.0.1",
+    "eslint": "7.2.0",
+    "eslint-config-airbnb": "18.2.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-import-resolver-babel-module": "^5.2.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-watch": "^7.0.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.1",
+    "husky": "^4.2.5",
+    "mini-css-extract-plugin": "^1.3.8",
+    "node-sass": "^5.0.0",
+    "postcss-cli": "^8.3.1",
+    "postcss-loader": "^4.2.0",
+    "pug": "^2.0.0",
+    "pug-lint-config-clock": "^2.0.0",
+    "pug-loader": "^2.4.0",
+    "rimraf": "^3.0.2",
+    "sass-loader": "^10.1.1",
+    "stylelint": "^13.6.1",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-standard": "^20.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.18.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3",
+    "yarn": "^1.22.10"
+  },
+  "browserlists": [
+    "defaults",
+    "ie 11",
+    "ie 9",
+    "maintained node versions"
+  ],
+  "dependencies": {
+    "css-reset-and-normalize": "^2.3.5",
+    "css-reset-and-normalize-sass": "^0.1.2",
+    "sass-rem": "^2.0.1"
+  },
+  "engines": {
+    "node": ">= 11.14.0",
+    "npm": ">=6.7.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "post-commit": "git push -u"
+    }
+  }
+}

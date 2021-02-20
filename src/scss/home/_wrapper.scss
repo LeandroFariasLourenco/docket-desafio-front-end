@@ -1,0 +1,19 @@
+.home__wrapper {
+  width: 100%;
+  transform: translateY(rem(-60px));
+  padding: 0 rem(140px);
+
+  @include flex-centered;
+
+  &__form {
+    background-color: white;
+
+    @extend %container;
+  }
+
+  &__candidate-token {
+    background-color: $color-transparent-blue;
+
+    @extend %container;
+  }
+}
