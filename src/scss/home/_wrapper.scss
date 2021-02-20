@@ -6,14 +6,81 @@
   @include flex-centered;
 
   &__form {
+    &__title {
+      font-weight: bold;
+      font-size: rem(16px);
+      margin-bottom: rem(20px);
+    }
+
+    &__group {
+      display: flex;
+      flex-flow: column;
+      max-width: rem(426px);
+
+      & + &:not(.side-by-side) {
+        margin-top: rem(20px);
+      }
+    }
+
+    &__wrapper {
+      display: flex;
+      margin-top: rem(38px);
+
+      .side-by-side {
+        max-width: rem(142px);
+
+        &:first-child {
+          margin-right: rem(15px);
+        }
+
+        &:not(:first-child) {
+          margin-left: rem(15px);
+        }
+      }
+    }
+
+    &__name {
+      font-size: rem(14px);
+    }
+
+    &__feedback {
+      font-size: rem(10px);
+    }
+
+    &__input {
+      margin: rem(6px) 0;
+      padding: rem(10px);
+      border: rem(1px) solid $input-border;
+      font-size: rem(14px);
+
+      &::placeholder {
+        color: $input-placeholder-color;
+      }
+    }
+  }
+
+  &__candidate {
     background-color: white;
 
     @extend %container;
-  }
 
-  &__candidate-token {
-    background-color: $color-transparent-blue;
+    &__title {
+      color: black;
+      font-size: rem(24px);
+      font-weight: bold;
+    }
 
-    @extend %container;
+    &__text {
+      font-size: rem(14px);
+      color: black;
+      margin-top: rem(20px);
+      margin-bottom: rem(30px);
+    }
+
+    &-token {
+      background-color: $color-transparent-blue;
+
+      @extend %container;
+    }
   }
 }

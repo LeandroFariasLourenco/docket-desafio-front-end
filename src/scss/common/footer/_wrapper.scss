@@ -1,7 +1,7 @@
 .footer__wrapper {
   width: 100%;
   padding: rem(22px) 0;
-  background-image: linear-gradient(116deg, $color-light-purple, $color-dark-purple);
+  background: 116deg, $color-light-purple 0%, $color-dark-purple) 0% 0% no-repeat padding-box;
   padding-top: rem(30px);
 
   &__highlight {

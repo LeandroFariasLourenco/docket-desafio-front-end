@@ -7,7 +7,45 @@ html(lang="pt-br")
     include ./partials/header.pug
 
     section(class="home__wrapper")
-      div(class="home__wrapper__form")
+      div(class="home__wrapper__candidate")
+        h1(class="home__wrapper__candidate__title") Venha trabalhar na Docket
+
+        p(class="home__wrapper__candidate__text")
+          | Preencha o formulário abaixo e
+          | venha trabalhar em uma das startups mais desejadas do Brasil!
+
+        form(class="home__wrapper__form")
+          h2(class="home__wrapper__form__title")
+            | Dados pessoais
+
+          div(class="home__wrapper__form__group")
+            label(class="home__wrapper__form__name" for="")
+              | * Nome Completo
+            input(class="home__wrapper__form__input" id="" type="" required placeholder="Leandro Farias Lourenço")
+            span(class="home__wrapper__form__feedback")
+              | Mensagem de feedback
+
+          div(class="home__wrapper__form__group")
+            label(class="home__wrapper__form__name" for="")
+              | * E-mail
+            input(class="home__wrapper__form__input" id="" type="" required placeholder="seunome@sobrenome.com.br")
+            span(class="home__wrapper__form__feedback")
+              | Mensagem de feedback
+
+          div(class="home__wrapper__form__wrapper")
+            div(class="home__wrapper__form__group side-by-side")
+              label(class="home__wrapper__form__name" for="")
+                | * Telefone 1
+              input(class="home__wrapper__form__input" id="" type="" required placeholder="(88)8888-8888")
+              span(class="home__wrapper__form__feedback")
+                | Mensagem de feedback
+
+            div(class="home__wrapper__form__group side-by-side")
+              label(class="home__wrapper__form__name" for="")
+                | Telefone 2
+              input(class="home__wrapper__form__input" id="" type="" required placeholder="(88)8888-8888")
+              span(class="home__wrapper__form__feedback")
+                | Mensagem de feedback
 
       div(class="home__wrapper__candidate-token")
 
